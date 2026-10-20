@@ -1,0 +1,161 @@
+
+.aurelle-gallery {
+  background: #11110f;
+  color: #f6f1e8;
+  min-height: 100vh;
+  padding: 85px 8% 0;
+}
+
+.gallery-heading {
+  max-width: 720px;
+  margin: 0 auto 65px;
+  text-align: center;
+}
+
+.gallery-heading > span,
+.gallery-cta > span {
+  color: #d7b77b;
+  font-size: 10px;
+  letter-spacing: 3px;
+}
+
+.gallery-heading h1,
+.gallery-cta h2 {
+  margin: 22px 0;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(44px, 7vw, 78px);
+  font-weight: 400;
+  letter-spacing: -2px;
+}
+
+.gallery-heading h1 em,
+.gallery-cta h2 em {
+  color: #d7b77b;
+}
+
+.gallery-heading p {
+  max-width: 520px;
+  margin: 0 auto;
+  color: #aaa59b;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 42px 25px;
+}
+
+.gallery-card {
+  min-width: 0;
+}
+
+.gallery-image {
+  position: relative;
+  height: 340px;
+  overflow: hidden;
+  background: #22211d;
+}
+
+.gallery-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s ease;
+}
+
+.gallery-card:hover .gallery-image img {
+  transform: scale(1.06);
+}
+
+.gallery-number {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  padding: 9px 12px;
+  background: rgba(15, 15, 13, 0.8);
+  color: #d7b77b;
+  font-size: 11px;
+}
+
+.gallery-caption {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 20px 2px 0;
+}
+
+.gallery-caption div > span {
+  color: #d7b77b;
+  font-size: 9px;
+  letter-spacing: 2px;
+}
+
+.gallery-caption h2 {
+  margin: 9px 0 0;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.gallery-arrow {
+  color: #d7b77b;
+  font-size: 24px;
+}
+
+.gallery-cta {
+  margin: 90px -8.7% 0;
+  padding: 85px 20px;
+  text-align: center;
+  background: #191916;
+}
+
+.gallery-cta h2 {
+  font-size: clamp(40px, 6vw, 65px);
+}
+
+.gallery-cta > a {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 12px;
+  padding: 17px 23px;
+  background: #d7b77b;
+  color: #17140e;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+
+.gallery-cta > a:hover {
+  background: #f0d5a0;
+}
+
+@media (max-width: 650px) {
+  .aurelle-gallery {
+    padding: 65px 22px 0;
+  }
+
+  .gallery-heading {
+    margin-bottom: 42px;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .gallery-image {
+    height: 290px;
+  }
+
+  .gallery-cta {
+    margin: 70px -22px 0;
+    padding: 65px 20px;
+  }
+}

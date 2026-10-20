@@ -1,0 +1,42 @@
+
+.aurelle-reveal {
+  opacity: 0;
+  filter: blur(4px);
+  transition:
+    opacity 800ms ease,
+    transform 800ms cubic-bezier(0.2, 0.65, 0.3, 1),
+    filter 800ms ease;
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
+.aurelle-reveal-up {
+  transform: translateY(34px);
+}
+
+.aurelle-reveal-down {
+  transform: translateY(-24px);
+}
+
+.aurelle-reveal-left {
+  transform: translateX(-30px);
+}
+
+.aurelle-reveal-right {
+  transform: translateX(30px);
+}
+
+.aurelle-reveal.is-visible {
+  opacity: 1;
+  filter: blur(0);
+  transform: translate(0, 0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .aurelle-reveal,
+  .aurelle-reveal.is-visible {
+    opacity: 1;
+    filter: none;
+    transform: none;
+    transition: none;
+  }
+}

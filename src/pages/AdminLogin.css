@@ -1,0 +1,252 @@
+
+.aurelle-login-page {
+  min-height: 100vh;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 90px 20px 75px;
+  background: #10110f;
+  color: #f4f0e7;
+  font-family: inherit;
+}
+
+.aurelle-login-glow {
+  position: absolute;
+  z-index: -1;
+  width: 480px;
+  height: 480px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -55%);
+  background: radial-gradient(circle, rgba(214, 183, 122, 0.11), transparent 70%);
+  pointer-events: none;
+}
+
+.aurelle-login-back {
+  position: absolute;
+  top: 28px;
+  left: 30px;
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: #c4c0b5;
+  text-decoration: none;
+  font-size: 13px;
+  transition: color 0.2s ease;
+}
+
+.aurelle-login-back:hover {
+  color: #d6b77a;
+}
+
+.aurelle-login-card {
+  width: 100%;
+  max-width: 440px;
+  padding: 38px;
+  border: 1px solid rgba(214, 183, 122, 0.2);
+  border-radius: 7px;
+  background: rgba(22, 23, 20, 0.96);
+  box-shadow: 0 25px 90px rgba(0, 0, 0, 0.28);
+}
+
+.aurelle-login-brand {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  color: inherit;
+  text-decoration: none;
+  margin-bottom: 37px;
+}
+
+.aurelle-login-mark {
+  display: grid;
+  place-items: center;
+  width: 43px;
+  height: 43px;
+  border: 1px solid #d6b77a;
+  color: #d6b77a;
+  font-family: Georgia, serif;
+  font-size: 27px;
+}
+
+.aurelle-login-brand strong,
+.aurelle-login-brand small {
+  display: block;
+}
+
+.aurelle-login-brand strong {
+  letter-spacing: 4px;
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.aurelle-login-brand small {
+  margin-top: 5px;
+  color: #a39e91;
+  letter-spacing: 1.4px;
+  font-size: 8px;
+}
+
+.aurelle-login-lock {
+  display: grid;
+  place-items: center;
+  width: 47px;
+  height: 47px;
+  margin-bottom: 23px;
+  color: #d6b77a;
+  border: 1px solid rgba(214, 183, 122, 0.28);
+  border-radius: 50%;
+}
+
+.aurelle-login-eyebrow {
+  margin: 0 0 12px;
+  color: #d6b77a;
+  font-size: 10px;
+  letter-spacing: 2.2px;
+  font-weight: 600;
+}
+
+.aurelle-login-card h1 {
+  margin: 0;
+  font-size: clamp(32px, 6vw, 41px);
+  font-weight: 400;
+  letter-spacing: -1.4px;
+}
+
+.aurelle-login-card h1 em {
+  color: #d6b77a;
+  font-family: Georgia, serif;
+  font-weight: 400;
+}
+
+.aurelle-login-description {
+  margin: 13px 0 29px;
+  color: #aaa99f;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.aurelle-login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.aurelle-login-form label {
+  margin-top: 7px;
+  color: #e3dfd5;
+  font-size: 12px;
+}
+
+.aurelle-login-form input {
+  width: 100%;
+  min-width: 0;
+  height: 47px;
+  padding: 0 13px;
+  outline: none;
+  border: 1px solid #383831;
+  border-radius: 3px;
+  background: #141510;
+  color: #f4f0e7;
+  font: inherit;
+  font-size: 13px;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease;
+}
+
+.aurelle-login-form input:focus {
+  border-color: #d6b77a;
+}
+
+.aurelle-login-form input::placeholder {
+  color: #77776e;
+}
+
+.aurelle-password-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.aurelle-password-wrap input {
+  padding-right: 46px;
+}
+
+.aurelle-password-wrap button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 47px;
+  width: 44px;
+  display: grid;
+  place-items: center;
+  border: 0;
+  background: transparent;
+  color: #aaa99f;
+  cursor: pointer;
+}
+
+.aurelle-login-submit {
+  min-height: 48px;
+  margin-top: 15px;
+  border: 1px solid #d6b77a;
+  border-radius: 3px;
+  background: #d6b77a;
+  color: #171711;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s ease, opacity 0.2s ease;
+}
+
+.aurelle-login-submit:hover {
+  background: #e5ca91;
+}
+
+.aurelle-login-submit:disabled {
+  cursor: wait;
+  opacity: 0.65;
+}
+
+.aurelle-login-error {
+  margin: 5px 0 0;
+  color: #ff9c91;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.aurelle-login-security {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+  margin: 24px 0 0;
+  color: #8f8e84;
+  font-size: 11px;
+}
+
+.aurelle-login-footer {
+  position: absolute;
+  bottom: 22px;
+  left: 15px;
+  right: 15px;
+  text-align: center;
+  color: #77776e;
+  font-size: 9px;
+  letter-spacing: 1.2px;
+}
+
+@media (max-width: 480px) {
+  .aurelle-login-card {
+    padding: 27px 22px;
+  }
+
+  .aurelle-login-back {
+    left: 20px;
+    top: 22px;
+  }
+}

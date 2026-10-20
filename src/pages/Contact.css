@@ -1,0 +1,545 @@
+
+/* =========================================
+   AURELLE — CONTACT PAGE
+   Premium Dark / Champagne Gold Design
+========================================= */
+
+.aurelle-contact {
+  --contact-gold: #d7b77b;
+  --contact-bg: #11110f;
+  --contact-text: #f6f1e8;
+  --contact-muted: #b5b0a5;
+
+  min-height: 80vh;
+  overflow: hidden;
+  background: var(--contact-bg);
+  color: var(--contact-text);
+}
+
+.aurelle-contact * {
+  box-sizing: border-box;
+}
+
+.aurelle-contact a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* HERO */
+
+.contact-hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 460px;
+  padding: 100px 9%;
+  isolation: isolate;
+  background: #171612;
+}
+
+.contact-hero::before {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(13, 13, 11, 0.94),
+      rgba(13, 13, 11, 0.62) 60%,
+      rgba(13, 13, 11, 0.3)
+    ),
+    url("https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=2000&q=85")
+      center / cover;
+  content: "";
+}
+
+.contact-hero-content {
+  max-width: 750px;
+  animation: contact-reveal 0.8s ease both;
+}
+
+.contact-eyebrow {
+  display: inline-block;
+  color: var(--contact-gold);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  line-height: 1.8;
+}
+
+.contact-hero h1 {
+  margin: 22px 0;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(48px, 7vw, 82px);
+  font-weight: 400;
+  letter-spacing: -1.5px;
+  line-height: 1.12;
+}
+
+.contact-hero h1 em {
+  color: var(--contact-gold);
+  font-weight: 400;
+}
+
+.contact-hero p {
+  max-width: 470px;
+  color: #d0c9bd;
+  font-size: 13px;
+  line-height: 2;
+}
+
+/* CONTACT INFORMATION */
+
+.contact-information {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 25px;
+  padding: 65px 9%;
+  border-bottom: 1px solid #302d26;
+  background: #151512;
+}
+
+.contact-info-card {
+  padding: 22px 20px;
+  border-left: 1px solid #514530;
+}
+
+.contact-info-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  margin-bottom: 20px;
+  border: 1px solid #4b412f;
+  border-radius: 50%;
+  color: var(--contact-gold);
+  font-size: 19px;
+}
+
+.contact-info-card h2 {
+  margin: 0 0 12px;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 22px;
+  font-weight: 400;
+}
+
+.contact-info-card p {
+  margin: 5px 0;
+  color: var(--contact-muted);
+  font-size: 12px;
+  line-height: 1.9;
+}
+
+.contact-info-card a {
+  display: inline-block;
+  margin-top: 10px;
+  color: var(--contact-gold);
+  font-size: 11px;
+  transition: color 0.2s ease;
+}
+
+.contact-info-card a:hover {
+  color: #f3dba9;
+}
+
+/* CONTACT + RESERVATION AREA */
+
+.contact-main {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  align-items: start;
+  gap: 75px;
+  padding: 100px 9%;
+}
+
+.contact-message {
+  padding-top: 12px;
+}
+
+.contact-message h2 {
+  margin: 20px 0;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(38px, 4.4vw, 56px);
+  font-weight: 400;
+  letter-spacing: -1px;
+  line-height: 1.2;
+}
+
+.contact-message h2 em {
+  color: var(--contact-gold);
+  font-weight: 400;
+}
+
+.contact-message > p {
+  max-width: 430px;
+  color: var(--contact-muted);
+  font-size: 13px;
+  line-height: 2;
+}
+
+.contact-message-note {
+  margin-top: 30px;
+  padding: 20px;
+  border-left: 2px solid var(--contact-gold);
+  background: #191915;
+}
+
+.contact-message-note p {
+  margin: 0;
+  color: #c9c1b4;
+  font-size: 12px;
+  line-height: 1.9;
+}
+
+/* RESERVATION PANEL */
+
+.contact-reservation {
+  padding: 38px;
+  border: 1px solid #383329;
+  background: #171714;
+  scroll-margin-top: 110px;
+}
+
+.contact-reservation-heading {
+  margin-bottom: 30px;
+}
+
+.contact-reservation-heading > span {
+  color: var(--contact-gold);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.contact-reservation-heading h2 {
+  margin: 13px 0 10px;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(30px, 3.5vw, 40px);
+  font-weight: 400;
+}
+
+.contact-reservation-heading p {
+  margin: 0;
+  color: var(--contact-muted);
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+/* FORM LAYOUT
+   These classes are ready for the reservation form.
+*/
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-form-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.contact-form-group {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.contact-form-group label {
+  color: #e6dfd3;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+}
+
+.contact-form-group input,
+.contact-form-group select,
+.contact-form-group textarea {
+  width: 100%;
+  min-height: 49px;
+  padding: 13px 14px;
+  border: 1px solid #403b31;
+  border-radius: 0;
+  outline: none;
+  background: #11110f;
+  color: var(--contact-text);
+  font-family: inherit;
+  font-size: 12px;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.contact-form-group input::placeholder,
+.contact-form-group textarea::placeholder {
+  color: #777166;
+}
+
+.contact-form-group select {
+  color-scheme: dark;
+  cursor: pointer;
+}
+
+.contact-form-group textarea {
+  min-height: 115px;
+  resize: vertical;
+}
+
+.contact-form-group input:focus,
+.contact-form-group select:focus,
+.contact-form-group textarea:focus {
+  border-color: var(--contact-gold);
+  box-shadow: 0 0 0 2px rgba(215, 183, 123, 0.09);
+}
+
+.contact-form-group input:disabled,
+.contact-form-group select:disabled,
+.contact-form-group textarea:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+.contact-form-group input[type="date"] {
+  color-scheme: dark;
+}
+
+.contact-form-error {
+  color: #ff9d94;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.contact-form-success {
+  padding: 15px;
+  border: 1px solid #546b48;
+  background: #1b2418;
+  color: #cde8bb;
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+.contact-form-submit {
+  display: flex;
+  width: 100%;
+  min-height: 52px;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 5px;
+  padding: 15px 20px;
+  border: 1px solid var(--contact-gold);
+  background: var(--contact-gold);
+  color: #17140e;
+  font-family: inherit;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.contact-form-submit:hover {
+  background: transparent;
+  color: var(--contact-gold);
+}
+
+.contact-form-submit:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+.contact-form-disclaimer {
+  margin: 0;
+  color: #898276;
+  font-size: 10px;
+  line-height: 1.8;
+  text-align: center;
+}
+
+/* GOOGLE MAP */
+
+.contact-location {
+  padding: 0 9% 100px;
+}
+
+.contact-location-heading {
+  margin-bottom: 25px;
+}
+
+.contact-location-heading h2 {
+  margin: 12px 0;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(34px, 4vw, 48px);
+  font-weight: 400;
+}
+
+.contact-location-heading p {
+  color: var(--contact-muted);
+  font-size: 12px;
+  line-height: 1.9;
+}
+
+.contact-map {
+  width: 100%;
+  height: 390px;
+  overflow: hidden;
+  border: 1px solid #383329;
+  background: #191915;
+}
+
+.contact-map iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  filter: grayscale(0.75) contrast(0.95);
+}
+
+.contact-directions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 18px;
+}
+
+.contact-directions a {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 15px 20px;
+  border: 1px solid var(--contact-gold);
+  color: var(--contact-gold);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.contact-directions a:hover {
+  background: var(--contact-gold);
+  color: #17140e;
+}
+
+/* ANIMATION */
+
+@keyframes contact-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* TABLET */
+
+@media (max-width: 900px) {
+  .contact-hero {
+    padding: 80px 6%;
+  }
+
+  .contact-information {
+    padding: 50px 6%;
+    gap: 12px;
+  }
+
+  .contact-main {
+    grid-template-columns: 1fr;
+    gap: 45px;
+    padding: 75px 6%;
+  }
+
+  .contact-message > p {
+    max-width: 600px;
+  }
+
+  .contact-reservation {
+    width: 100%;
+  }
+
+  .contact-location {
+    padding: 0 6% 75px;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+  .contact-hero {
+    min-height: 410px;
+    padding: 75px 24px;
+  }
+
+  .contact-hero h1 {
+    font-size: clamp(45px, 12vw, 62px);
+    letter-spacing: -0.8px;
+  }
+
+  .contact-information {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 45px 24px;
+  }
+
+  .contact-info-card {
+    padding: 10px 18px;
+  }
+
+  .contact-main {
+    gap: 35px;
+    padding: 65px 20px;
+  }
+
+  .contact-message h2 {
+    font-size: 43px;
+  }
+
+  .contact-reservation {
+    padding: 24px 18px;
+  }
+
+  .contact-reservation-heading h2 {
+    font-size: 33px;
+  }
+
+  .contact-form-row {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .contact-location {
+    padding: 0 20px 65px;
+  }
+
+  .contact-map {
+    height: 300px;
+  }
+
+  .contact-directions {
+    justify-content: stretch;
+  }
+
+  .contact-directions a {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .aurelle-contact *,
+  .aurelle-contact *::before,
+  .aurelle-contact *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

@@ -1,0 +1,1014 @@
+
+/* =========================================
+   AURELLE — LUXURY MENU
+   Dark Obsidian + Champagne Gold
+========================================= */
+
+.aurelle-menu-page {
+  --menu-bg: #0a0a09;
+  --menu-surface: #11110f;
+  --menu-surface-light: #171714;
+  --menu-gold: #c9a96e;
+  --menu-gold-light: #ead5a6;
+  --menu-text: #f4f0e8;
+  --menu-muted: #aaa69d;
+  --menu-border: rgba(201, 169, 110, 0.2);
+
+  width: 100%;
+  overflow: clip;
+  background: var(--menu-bg);
+  color: var(--menu-text);
+  font-family: inherit;
+}
+
+.aurelle-menu-page *,
+.aurelle-menu-page *::before,
+.aurelle-menu-page *::after {
+  box-sizing: border-box;
+}
+
+.aurelle-menu-page a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.aurelle-menu-page button {
+  font: inherit;
+}
+
+.aurelle-menu-page img {
+  display: block;
+  width: 100%;
+}
+
+.aurelle-menu-page em {
+  color: var(--menu-gold);
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+/* SHARED EYEBROW */
+
+.aurelle-menu-page .menu-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--menu-gold);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  line-height: 1.8;
+}
+
+.aurelle-menu-page .menu-eyebrow-line {
+  display: inline-block;
+  width: 29px;
+  height: 1px;
+  flex: 0 0 auto;
+  background: var(--menu-gold);
+}
+
+/* =========================================
+   HERO
+========================================= */
+
+.aurelle-menu-page .menu-hero {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  align-items: center;
+  min-height: clamp(540px, 70vh, 780px);
+  padding: 110px max(7%, calc((100vw - 1240px) / 2));
+  overflow: hidden;
+  background: #15130f;
+}
+
+.aurelle-menu-page .menu-hero-image {
+  position: absolute;
+  z-index: -3;
+  inset: 0;
+  background-image: url("https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=2200&q=90");
+  background-size: cover;
+  background-position: center 54%;
+  transform: scale(1.035);
+  animation: menuHeroReveal 1.4s ease-out both;
+}
+
+.aurelle-menu-page .menu-hero-overlay {
+  position: absolute;
+  z-index: -2;
+  inset: 0;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(7, 7, 6, 0.96) 0%,
+      rgba(7, 7, 6, 0.84) 35%,
+      rgba(7, 7, 6, 0.4) 72%,
+      rgba(7, 7, 6, 0.18) 100%
+    ),
+    linear-gradient(
+      0deg,
+      rgba(7, 7, 6, 0.75) 0%,
+      transparent 32%,
+      rgba(7, 7, 6, 0.13) 100%
+    );
+}
+
+.aurelle-menu-page .menu-hero-content {
+  position: relative;
+  z-index: 1;
+  width: min(680px, 100%);
+  animation: menuContentReveal 0.9s 0.15s ease both;
+}
+
+.aurelle-menu-page .menu-hero-content h1 {
+  margin: 28px 0 22px;
+  color: #f7f3eb;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(46px, 6.4vw, 86px);
+  font-weight: 400;
+  letter-spacing: -3.2px;
+  line-height: 1.06;
+}
+
+.aurelle-menu-page .menu-hero-content h1 em {
+  color: var(--menu-gold-light);
+}
+
+.aurelle-menu-page .menu-hero-content > p {
+  max-width: 420px;
+  margin: 0;
+  color: rgba(244, 240, 232, 0.76);
+  font-size: 14px;
+  line-height: 2;
+}
+
+.aurelle-menu-page .menu-hero-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 23px;
+  margin-top: 34px;
+  padding: 15px 0;
+  border-bottom: 1px solid var(--menu-gold);
+  color: #f3e4c5;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  transition: color 0.25s ease, gap 0.25s ease;
+}
+
+.aurelle-menu-page .menu-hero-link:hover {
+  gap: 32px;
+  color: #fff;
+}
+
+.aurelle-menu-page .menu-link-arrow {
+  color: var(--menu-gold);
+  font-size: 18px;
+}
+
+.aurelle-menu-page .menu-hero-caption {
+  position: absolute;
+  right: max(7%, calc((100vw - 1240px) / 2));
+  bottom: 27px;
+  left: max(7%, calc((100vw - 1240px) / 2));
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  color: rgba(245, 239, 226, 0.64);
+  font-size: 9px;
+  letter-spacing: 1.8px;
+}
+
+.aurelle-menu-page .menu-hero-index {
+  position: absolute;
+  top: 16%;
+  right: 8%;
+  color: rgba(234, 213, 166, 0.13);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(100px, 18vw, 240px);
+  font-style: italic;
+  line-height: 1;
+  pointer-events: none;
+}
+
+/* =========================================
+   INTRODUCTION
+========================================= */
+
+.aurelle-menu-page .menu-introduction {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 115px 24px 105px;
+  overflow: hidden;
+  text-align: center;
+  background:
+    radial-gradient(
+      ellipse at 50% 0%,
+      rgba(201, 169, 110, 0.07),
+      transparent 65%
+    ),
+    var(--menu-bg);
+}
+
+.aurelle-menu-page .menu-introduction .menu-eyebrow {
+  position: relative;
+  z-index: 1;
+}
+
+.aurelle-menu-page .menu-introduction h2 {
+  position: relative;
+  z-index: 1;
+  margin: 25px 0 18px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(36px, 5vw, 61px);
+  font-weight: 400;
+  letter-spacing: -1.8px;
+  line-height: 1.2;
+}
+
+.aurelle-menu-page .menu-introduction > p {
+  position: relative;
+  z-index: 1;
+  max-width: 570px;
+  margin: 0;
+  color: var(--menu-muted);
+  font-size: 13px;
+  line-height: 2.1;
+}
+
+.aurelle-menu-page .menu-intro-mark {
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  color: rgba(201, 169, 110, 0.035);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(210px, 32vw, 390px);
+  font-style: italic;
+  line-height: 1;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+.aurelle-menu-page .menu-intro-divider {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 35px;
+}
+
+.aurelle-menu-page .menu-intro-divider > span:not(.menu-divider-diamond) {
+  width: 54px;
+  height: 1px;
+  background: var(--menu-border);
+}
+
+.aurelle-menu-page .menu-divider-diamond {
+  color: var(--menu-gold);
+  font-size: 9px;
+}
+
+/* =========================================
+   MENU COLLECTION
+========================================= */
+
+.aurelle-menu-page .menu-collection {
+  padding: 100px max(7%, calc((100vw - 1240px) / 2)) 75px;
+  background: #0e0e0c;
+  scroll-margin-top: 100px;
+}
+
+.aurelle-menu-page .menu-collection-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 35px;
+  margin-bottom: 37px;
+}
+
+.aurelle-menu-page .menu-heading-copy h2 {
+  margin: 17px 0 12px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(38px, 5vw, 59px);
+  font-weight: 400;
+  letter-spacing: -1.8px;
+  line-height: 1.15;
+}
+
+.aurelle-menu-page .menu-heading-copy > p {
+  margin: 0;
+  color: var(--menu-muted);
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.aurelle-menu-page .menu-collection-count {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 7px;
+  padding-bottom: 5px;
+}
+
+.aurelle-menu-page .menu-count-number {
+  color: var(--menu-gold);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 47px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.aurelle-menu-page .menu-count-label {
+  color: #8d897f;
+  font-size: 8px;
+  letter-spacing: 1.8px;
+  text-align: right;
+}
+
+/* FILTER BUTTONS */
+
+.aurelle-menu-page .menu-category-filters {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-bottom: 34px;
+  padding: 0 0 23px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.09);
+}
+
+.aurelle-menu-page .menu-filter {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 11px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 0;
+  background: transparent;
+  color: #b7b2a8;
+  cursor: pointer;
+  font-size: 11px;
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.aurelle-menu-page .menu-filter:hover {
+  border-color: var(--menu-gold);
+  color: var(--menu-gold-light);
+}
+
+.aurelle-menu-page .menu-filter.active {
+  border-color: var(--menu-gold);
+  background: var(--menu-gold);
+  color: #14110b;
+}
+
+.aurelle-menu-page .menu-filter-dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: currentColor;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.aurelle-menu-page .menu-filter.active .menu-filter-dot {
+  opacity: 1;
+}
+
+/* DISH GRID */
+
+.aurelle-menu-page .menu-dishes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 38px 23px;
+}
+
+.aurelle-menu-page .menu-dish-card {
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid rgba(201, 169, 110, 0.12);
+  background: var(--menu-surface);
+  animation: menuCardReveal 0.55s both;
+  animation-delay: calc(var(--dish-index, 0) * 65ms);
+  transition:
+    border-color 0.35s ease,
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.aurelle-menu-page .menu-dish-card:hover {
+  z-index: 1;
+  border-color: rgba(201, 169, 110, 0.58);
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.3);
+  transform: translateY(-5px);
+}
+
+/* IMAGE AREA */
+
+.aurelle-menu-page .menu-dish-photo {
+  position: relative;
+  isolation: isolate;
+  aspect-ratio: 1.22 / 1;
+  overflow: hidden;
+  background: #24211b;
+}
+
+.aurelle-menu-page .menu-dish-photo > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition:
+    transform 0.8s cubic-bezier(0.2, 0.65, 0.3, 1),
+    filter 0.5s ease;
+}
+
+.aurelle-menu-page .menu-dish-card:hover .menu-dish-photo > img {
+  filter: saturate(1.08);
+  transform: scale(1.085);
+}
+
+.aurelle-menu-page .menu-photo-shade {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.33) 0%,
+    transparent 35%,
+    transparent 60%,
+    rgba(0, 0, 0, 0.55) 100%
+  );
+  pointer-events: none;
+}
+
+.aurelle-menu-page .menu-dish-tag {
+  position: absolute;
+  z-index: 1;
+  top: 15px;
+  left: 15px;
+  max-width: calc(100% - 30px);
+  padding: 8px 10px;
+  border: 1px solid rgba(234, 213, 166, 0.5);
+  background: rgba(12, 12, 10, 0.72);
+  color: #f2dfb8;
+  font-size: 8px;
+  font-weight: 600;
+  letter-spacing: 1.3px;
+  backdrop-filter: blur(8px);
+}
+
+.aurelle-menu-page .menu-dish-number {
+  position: absolute;
+  z-index: 1;
+  top: 15px;
+  right: 15px;
+  color: rgba(255, 255, 255, 0.84);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+.aurelle-menu-page .menu-photo-category {
+  position: absolute;
+  z-index: 1;
+  right: 15px;
+  bottom: 14px;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 9px;
+  letter-spacing: 1.7px;
+  text-transform: uppercase;
+}
+
+/* DISH DETAILS */
+
+.aurelle-menu-page .menu-dish-details {
+  padding: 20px 19px 16px;
+}
+
+.aurelle-menu-page .menu-dish-title-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.aurelle-menu-page .menu-dish-title-row h3 {
+  margin: 0;
+  color: #f4f0e8;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(17px, 1.65vw, 22px);
+  font-weight: 400;
+  line-height: 1.35;
+}
+
+.aurelle-menu-page .menu-dish-price {
+  display: inline-flex;
+  align-items: baseline;
+  flex: 0 0 auto;
+  gap: 2px;
+  color: var(--menu-gold-light);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 21px;
+}
+
+.aurelle-menu-page .menu-price-currency {
+  font-size: 13px;
+}
+
+.aurelle-menu-page .menu-dish-details > p {
+  min-height: 42px;
+  margin: 12px 0 18px;
+  color: #a7a398;
+  font-size: 11px;
+  line-height: 1.9;
+}
+
+.aurelle-menu-page .menu-dish-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding-top: 13px;
+  border-top: 1px solid rgba(255, 255, 255, 0.09);
+}
+
+.aurelle-menu-page .menu-dish-category {
+  color: #8e8a7e;
+  font-size: 9px;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+}
+
+.aurelle-menu-page .menu-card-accent {
+  display: grid;
+  width: 27px;
+  height: 27px;
+  flex: 0 0 auto;
+  place-items: center;
+  border: 1px solid var(--menu-border);
+  color: var(--menu-gold);
+  font-size: 13px;
+  transition:
+    color 0.25s ease,
+    background 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.aurelle-menu-page .menu-dish-card:hover .menu-card-accent {
+  border-color: var(--menu-gold);
+  background: var(--menu-gold);
+  color: #0a0a09;
+}
+
+.aurelle-menu-page .menu-empty-state {
+  padding: 50px 20px;
+  color: var(--menu-muted);
+  text-align: center;
+}
+
+.aurelle-menu-page .menu-collection-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 55px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.09);
+  color: #777368;
+  font-size: 8px;
+  letter-spacing: 1.8px;
+}
+
+.aurelle-menu-page .menu-footer-star {
+  padding: 0 5px;
+  color: var(--menu-gold);
+}
+
+/* =========================================
+   RESERVATION EXPERIENCE
+========================================= */
+
+.aurelle-menu-page .menu-experience {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  align-items: center;
+  min-height: 480px;
+  padding: 90px max(7%, calc((100vw - 1240px) / 2));
+  overflow: hidden;
+  background: #17130e;
+}
+
+.aurelle-menu-page .menu-experience-image {
+  position: absolute;
+  z-index: -3;
+  inset: 0;
+  background-image: url("https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=2200&q=85");
+  background-position: center 58%;
+  background-size: cover;
+  transform: scale(1.02);
+  transition: transform 1s ease;
+}
+
+.aurelle-menu-page .menu-experience:hover .menu-experience-image {
+  transform: scale(1.06);
+}
+
+.aurelle-menu-page .menu-experience-overlay {
+  position: absolute;
+  z-index: -2;
+  inset: 0;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(8, 8, 7, 0.96) 0%,
+      rgba(8, 8, 7, 0.82) 44%,
+      rgba(8, 8, 7, 0.34) 100%
+    ),
+    linear-gradient(0deg, rgba(8, 8, 7, 0.3), transparent);
+}
+
+.aurelle-menu-page .menu-experience-content {
+  max-width: 620px;
+}
+
+.aurelle-menu-page .menu-experience-content h2 {
+  margin: 23px 0 18px;
+  color: #f4f0e8;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(42px, 5.5vw, 69px);
+  font-weight: 400;
+  letter-spacing: -2px;
+  line-height: 1.12;
+}
+
+.aurelle-menu-page .menu-experience-content > p {
+  max-width: 390px;
+  margin: 0;
+  color: rgba(244, 240, 232, 0.72);
+  font-size: 13px;
+  line-height: 2;
+}
+
+.aurelle-menu-page .menu-reserve-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+  min-height: 53px;
+  margin-top: 30px;
+  padding: 0 22px;
+  border: 1px solid var(--menu-gold);
+  background: var(--menu-gold);
+  color: #14110b;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    gap 0.25s ease;
+}
+
+.aurelle-menu-page .menu-reserve-button span {
+  font-size: 17px;
+}
+
+.aurelle-menu-page .menu-reserve-button:hover {
+  gap: 37px;
+  background: transparent;
+  color: var(--menu-gold-light);
+}
+
+.aurelle-menu-page .menu-experience-index {
+  position: absolute;
+  right: max(7%, calc((100vw - 1240px) / 2));
+  bottom: 26px;
+  color: rgba(255, 255, 255, 0.58);
+  font-size: 8px;
+  letter-spacing: 2px;
+}
+
+/* =========================================
+   ANIMATIONS
+========================================= */
+
+@keyframes menuHeroReveal {
+  from {
+    opacity: 0.55;
+    transform: scale(1.1);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1.035);
+  }
+}
+
+@keyframes menuContentReveal {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes menuCardReveal {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================================
+   RESPONSIVE — TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+  .aurelle-menu-page .menu-hero {
+    min-height: 610px;
+    padding-right: 6%;
+    padding-left: 6%;
+  }
+
+  .aurelle-menu-page .menu-hero-caption {
+    right: 6%;
+    left: 6%;
+  }
+
+  .aurelle-menu-page .menu-collection {
+    padding-right: 5%;
+    padding-left: 5%;
+  }
+
+  .aurelle-menu-page .menu-dishes-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px 18px;
+  }
+
+  .aurelle-menu-page .menu-dish-title-row h3 {
+    font-size: 21px;
+  }
+
+  .aurelle-menu-page .menu-experience {
+    padding-right: 6%;
+    padding-left: 6%;
+  }
+}
+
+/* =========================================
+   RESPONSIVE — MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+  .aurelle-menu-page .menu-hero {
+    min-height: 610px;
+    min-height: min(700px, 82svh);
+    padding: 100px 25px 95px;
+  }
+
+  .aurelle-menu-page .menu-hero-image {
+    background-position: 59% center;
+  }
+
+  .aurelle-menu-page .menu-hero-overlay {
+    background:
+      linear-gradient(
+        90deg,
+        rgba(7, 7, 6, 0.88),
+        rgba(7, 7, 6, 0.42)
+      ),
+      linear-gradient(
+        0deg,
+        rgba(7, 7, 6, 0.82),
+        transparent 75%
+      );
+  }
+
+  .aurelle-menu-page .menu-hero-content h1 {
+    margin-top: 23px;
+    font-size: clamp(42px, 11vw, 59px);
+    letter-spacing: -1.8px;
+  }
+
+  .aurelle-menu-page .menu-hero-content > p {
+    max-width: 330px;
+    font-size: 12px;
+  }
+
+  .aurelle-menu-page .menu-hero-caption {
+    right: 24px;
+    bottom: 21px;
+    left: 24px;
+    font-size: 7px;
+    letter-spacing: 1px;
+  }
+
+  .aurelle-menu-page .menu-hero-caption span:last-child {
+    text-align: right;
+  }
+
+  .aurelle-menu-page .menu-hero-index {
+    top: 12%;
+    right: 4%;
+    font-size: 120px;
+  }
+
+  .aurelle-menu-page .menu-introduction {
+    padding: 78px 23px 72px;
+  }
+
+  .aurelle-menu-page .menu-introduction h2 {
+    font-size: clamp(34px, 9vw, 47px);
+    letter-spacing: -1.2px;
+  }
+
+  .aurelle-menu-page .menu-introduction > p {
+    font-size: 12px;
+  }
+
+  .aurelle-menu-page .menu-collection {
+    padding: 72px 19px 55px;
+  }
+
+  .aurelle-menu-page .menu-collection-heading {
+    align-items: flex-end;
+    gap: 12px;
+    margin-bottom: 26px;
+  }
+
+  .aurelle-menu-page .menu-heading-copy h2 {
+    font-size: clamp(34px, 8.5vw, 45px);
+    letter-spacing: -1.2px;
+  }
+
+  .aurelle-menu-page .menu-heading-copy > p {
+    max-width: 260px;
+    font-size: 11px;
+  }
+
+  .aurelle-menu-page .menu-collection-count {
+    flex: 0 0 auto;
+  }
+
+  .aurelle-menu-page .menu-count-number {
+    font-size: 35px;
+  }
+
+  .aurelle-menu-page .menu-count-label {
+    max-width: 75px;
+    font-size: 7px;
+    line-height: 1.6;
+  }
+
+  .aurelle-menu-page .menu-category-filters {
+    gap: 7px;
+    margin-bottom: 25px;
+    padding-bottom: 18px;
+  }
+
+  .aurelle-menu-page .menu-filter {
+    gap: 5px;
+    padding: 10px 11px;
+    font-size: 10px;
+  }
+
+  .aurelle-menu-page .menu-dishes-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 17px 11px;
+  }
+
+  .aurelle-menu-page .menu-dish-photo {
+    aspect-ratio: 0.88 / 1;
+  }
+
+  .aurelle-menu-page .menu-dish-tag {
+    top: 9px;
+    left: 8px;
+    max-width: calc(100% - 16px);
+    padding: 6px 7px;
+    font-size: 6px;
+    letter-spacing: 0.7px;
+  }
+
+  .aurelle-menu-page .menu-dish-number {
+    top: 9px;
+    right: 8px;
+    font-size: 10px;
+  }
+
+  .aurelle-menu-page .menu-photo-category {
+    right: 9px;
+    bottom: 9px;
+    font-size: 7px;
+    letter-spacing: 1px;
+  }
+
+  .aurelle-menu-page .menu-dish-details {
+    padding: 13px 10px 11px;
+  }
+
+  .aurelle-menu-page .menu-dish-title-row {
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+
+  .aurelle-menu-page .menu-dish-title-row h3 {
+    width: 100%;
+    font-size: 17px;
+  }
+
+  .aurelle-menu-page .menu-dish-price {
+    font-size: 19px;
+  }
+
+  .aurelle-menu-page .menu-price-currency {
+    font-size: 12px;
+  }
+
+  .aurelle-menu-page .menu-dish-details > p {
+    min-height: 53px;
+    margin: 9px 0 13px;
+    font-size: 10px;
+    line-height: 1.7;
+  }
+
+  .aurelle-menu-page .menu-dish-bottom {
+    gap: 5px;
+    padding-top: 10px;
+  }
+
+  .aurelle-menu-page .menu-dish-category {
+    font-size: 7px;
+    letter-spacing: 0.8px;
+  }
+
+  .aurelle-menu-page .menu-card-accent {
+    width: 23px;
+    height: 23px;
+    font-size: 11px;
+  }
+
+  .aurelle-menu-page .menu-collection-footer {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 35px;
+    font-size: 7px;
+    letter-spacing: 1.3px;
+  }
+
+  .aurelle-menu-page .menu-experience {
+    min-height: 440px;
+    padding: 75px 25px;
+  }
+
+  .aurelle-menu-page .menu-experience-image {
+    background-position: 58% center;
+  }
+
+  .aurelle-menu-page .menu-experience-content h2 {
+    font-size: clamp(42px, 10vw, 56px);
+    letter-spacing: -1.3px;
+  }
+
+  .aurelle-menu-page .menu-experience-content > p {
+    max-width: 310px;
+    font-size: 12px;
+  }
+
+  .aurelle-menu-page .menu-reserve-button {
+    gap: 16px;
+    padding: 0 15px;
+    font-size: 9px;
+  }
+
+  .aurelle-menu-page .menu-experience-index {
+    right: 24px;
+    bottom: 18px;
+    font-size: 7px;
+  }
+}
+
+/* ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+  .aurelle-menu-page *,
+  .aurelle-menu-page *::before,
+  .aurelle-menu-page *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
